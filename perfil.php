@@ -22,7 +22,13 @@
         <nav>
             <h1 href="home.php">Finmangas</h1>
             <img href="home.php" src="imgs/logo1.png" alt="logo">
-            <ul>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                
                 <li><a href="home.php">Home</a></li>
                 <li><a href="mangalist.php">Mangas</a></li>
                 <li><a href="chats.php">Chats</a></li>
@@ -31,13 +37,14 @@
             </ul>
         </nav>
     </header>
+    <script src="mobile-navbar.JS"></script>
     <main>
         <section>
-            <center>
+            <div class="container">
             <?php
             echo '<h1>'.$_SESSION['usuario'].'</h1>'
             ?>
-            <img href="home.php" class="ftperfil" src="imgs/perfil/perfil_exemplo_img.png">
+            <img class="ftperfil" src="imgs/perfil/perfil_exemplo_img.png">
             <h2>Sobre mim</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias perspiciatis quae dolor 
@@ -56,7 +63,7 @@
             <img width="30px" href="#" src="imgs/WhatsApp.svg.png">
             <img width="30px" href="#" src="imgs/insta_logo.svg">
             <img width="30px" href="#" src="imgs\twitter_logo.svg">
-            </center>
+            </div>
         </section>
     </main>
     <footer>

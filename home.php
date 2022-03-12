@@ -8,6 +8,7 @@
     <title>Finmangas</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="shortcut icon" href="imgs/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 
 <body>
@@ -24,7 +25,13 @@
         <nav>
             <h1 href="home.php">Finmangas</h1>
             <img href="home.php" src="imgs/logo1.png" alt="logo">
-            <ul>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                
                 <li><a href="home.php">Home</a></li>
                 <li><a href="mangalist.php">Mangas</a></li>
                 <li><a href="chats.php">Chats</a></li>
@@ -36,19 +43,19 @@
     <main>
     <section>
             <h1 data-text="&nbsp;Mangas">&nbsp;Mangas&nbsp;</h1>
-            <div class="rotacao">
-                <a>Mangas semanais</a>
-                <br>
-                <a href="teste.html">
-                <img src="imgs/imgs capa/bokunoherocapa.jpg">
-                </a>
-                <img href="#" src="imgs/imgs capa/drstonecapa.jpg">
-                <a href="mangas/snk.php">
-                <img href="#" src="imgs/imgs capa/sololevelingcapa.jpg">
-                </a>
-                <img href="#" src="imgs/imgs capa/shingekicapa.jpg">
-            </div>
-        </section>
+                <div class="rotacao">
+                    <a>Mangas semanais</a>
+                    <br>
+                    <a href="teste.html">
+                    <img src="imgs/imgs capa/bokunoherocapa.jpg">
+                    </a>
+                    <img href="#" src="imgs/imgs capa/drstonecapa.jpg">
+                    <a href="mangas/snk.php">
+                    <img href="#" src="imgs/imgs capa/sololevelingcapa.jpg">
+                    </a>
+                    <img href="#" src="imgs/imgs capa/shingekicapa.jpg">
+                </div>
+    </section>
     </main>
     <footer>
         <div>
@@ -66,4 +73,5 @@
             </div>
         </div>
     </footer>
+        <script src="mobile-navbar.JS"></script>
 </body>

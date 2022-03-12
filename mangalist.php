@@ -20,9 +20,14 @@
 	?>
     <header>
         <nav>
-            <h1 href="home.html">Finmangas</h1>
-            <img href="home.html" src="imgs/logo1.png" alt="logo">
-            <ul>
+            <h1 href="home.php">Finmangas</h1>
+            <img href="home.php" src="imgs/logo1.png" alt="logo">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
                 <li><a href="home.php">Home</a></li>
                 <li><a href="mangalist.php">Mangas</a></li>
                 <li><a href="chats.php">Chats</a></li>
@@ -31,23 +36,16 @@
             </ul>
         </nav>
     </header>
+    
     <main>
         <section>
             <div class="listaimagens">
                 <h1>Lista de mangas:</h1>
-                <img href="bokunohero.html" src="imgs/imgs capa/bokunoherocapa.jpg">
+                <a><img href="bokunohero.html" src="imgs/imgs capa/bokunoherocapa.jpg"></a>
                 <img src="imgs/imgs capa/drstonecapa.jpg">
                 <img src="imgs/imgs capa/shingekicapa.jpg">
                 <img src="imgs/imgs capa/sololevelingcapa.jpg">
-                <img href="bokunohero.html" src="imgs/imgs capa/bokunoherocapa.jpg">
-                <img src="imgs/imgs capa/drstonecapa.jpg">
-                <img src="imgs/imgs capa/shingekicapa.jpg">
-                <img src="imgs/imgs capa/sololevelingcapa.jpg">
-                <img href="bokunohero.html" src="imgs/imgs capa/bokunoherocapa.jpg">
-                <img src="imgs/imgs capa/drstonecapa.jpg">
-                <img src="imgs/imgs capa/shingekicapa.jpg">
-                <img src="imgs/imgs capa/sololevelingcapa.jpg">
-                <img href="bokunohero.html" src="imgs/imgs capa/bokunoherocapa.jpg">
+                <a><img href="bokunohero.html" src="imgs/imgs capa/bokunoherocapa.jpg"></a>
                 <img src="imgs/imgs capa/drstonecapa.jpg">
                 <img src="imgs/imgs capa/shingekicapa.jpg">
                 <img src="imgs/imgs capa/sololevelingcapa.jpg">
@@ -70,4 +68,5 @@
             </div>
         </div>
     </footer>
+    <script src="mobile-navbar.JS"></script>
 </body>

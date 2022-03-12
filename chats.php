@@ -20,9 +20,15 @@
 	?>
     <header>
         <nav>
-            <h1 href="home.html">Finmangas</h1>
-            <img href="home.html" src="imgs/logo1.png" alt="logo">
-            <ul>
+            <h1 href="home.php">Finmangas</h1>
+            <img href="home.php" src="imgs/logo1.png" alt="logo">
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                
                 <li><a href="home.php">Home</a></li>
                 <li><a href="mangalist.php">Mangas</a></li>
                 <li><a href="chats.php">Chats</a></li>
@@ -31,6 +37,7 @@
             </ul>
         </nav>
     </header>
+    <script src="mobile-navbar.JS"></script>
     <main>
         <section>
             <h1>Chats:</h1>

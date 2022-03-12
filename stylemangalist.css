@@ -6,7 +6,6 @@
     list-style: none;
 }
 body{
-    background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(159,92,244,1) 50%, rgb(251, 254, 255) 100%);
     background-size: 100%;
     background-attachment: fixed;
@@ -19,6 +18,7 @@ header{
     margin: 0 auto;
     background-color: rgb(19, 18, 18);
     position:sticky;
+    height: 8vh;
 }
 header::after{
     content: '';
@@ -27,23 +27,22 @@ header::after{
 }
 nav{
     color: whitesmoke;
-
 }
 nav img{
     float: left;
     width: 85px;
+    transition: 450ms;
 }
 nav h1{
-    float: left;
-    font-size: 65px;
-    margin: 0px;
-    position: relative;
-    transition: ease-in 450ms;
-    cursor: pointer;
+  float: left;
+  font-size: 65px;
+  position: relative;
+  transition: ease-in 450ms;
+  cursor: pointer;
 }
 nav h1:hover{
-      color: rgba(159,92,244,1);
-      filter: drop-shadow(0 0 25px currentColor);
+    color: rgba(159,92,244,1);
+    filter: drop-shadow(0 0 25px currentColor);
 }
 nav h1::before{
     content: '';
@@ -65,13 +64,13 @@ nav h1:hover::before{
 }
 nav ul{
     float: right;
-    margin-right: 150px;
+    margin-right: 5vh;
 }
 nav ul li{
-    margin-right: 180px;
+    margin-right: 4vh;
     display: inline-block;
 
-    padding-top: 33px;
+    padding-top: 3vh;
 }
 nav ul a{
     color:whitesmoke;
@@ -88,10 +87,11 @@ nav ul a:before{
     content: '';
     display: block;
     top: -33px;
-    height: 8px;
+    height: 14px;
     width: 100%;
     background: currentColor;
     position: absolute;
+    
 
     transform: scaleX(0);
     transform-origin: right;
@@ -100,10 +100,91 @@ nav ul a:before{
 nav ul a:hover::before{
     transform: scaleX(1);
     transform-origin: left;
+    
 }
 .login{
-    left: 100px;
+    margin-left: 2rem;
     color: rgb(248, 230, 63);
+}
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+.listaimagens img{
+    width: 20%;
+    position: relative;
+    transition: 400ms;
+    height: 20%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.151);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+@media(max-width: 1080px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        width: 50vw;
+        height: 100vh;
+        background: rgb(19, 18, 18);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 0;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+        z-index: 100;
+    }
+    nav ul li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+        float: right;
+        padding: 2vh;
+    }
+    .login{
+        margin-left: 0;
+    }
+    .listaimagens img{
+        position: static;
+    }
+}
+.nav-list.active{
+    transform: translateX(0);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 section{
     width: 80%;
@@ -111,7 +192,7 @@ section{
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 27%, rgba(71,8,114,1) 55%, rgba(78,0,106,1) 82%, rgba(78,9,121,1) 100%);
     padding-top: 150px;
-    padding-bottom: 250px;
+    height: 100vh;
 }
 section p{
     background: rgba(41, 2, 51, 0.253);
@@ -124,19 +205,9 @@ section p{
 .listaimagens h1{
     font-size: 50px;
 }
-.listaimagens img{
-    width: 20%;
-    position: relative;
-    transition: 400ms;
-    height: 450px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.151);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: pointer;
-}
 .listaimagens img:hover{
     width: 22%;
-    height: 500px;
+    height: 25%;
     padding: 20px;
 }
 footer{
@@ -145,6 +216,8 @@ footer{
     font-size: 20px;
     width: 100%;
     overflow: hidden;
+    bottom: 0;
+    position: relative;
 }
 footer div{
     padding: 15px;
