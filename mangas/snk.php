@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finmangas</title>
-    <link rel="stylesheet" type="text/css" href="/stylemangalist.css">
+    <link rel="stylesheet" type="text/css" href="/stylespaginamanga.css">
     <link rel="shortcut icon" href="/imgs/logo.png">
 </head>
 <body>
@@ -13,29 +13,46 @@
 			//session_start inicia a sessão
 			session_start();
 
-			if (!$_SESSION['usuario']){
+			if (empty($_SESSION['usuario'])){
 				header('Location: index.php');
 				exit;
 		}
 	?>
     <header>
         <nav>
-            <h1 href="home.html">Finmangas</h1>
-            <img href="home.html" src="/imgs/logo1.png" alt="logo">
-            <ul>
+            <a href="/home.php"><h1>Finmangas</h1></a>
+            <a href="/home.php"><img src="/imgs/logo1.png" alt="logo"></a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                
                 <li><a href="/home.php">Home</a></li>
                 <li><a href="/mangalist.php">Mangas</a></li>
                 <li><a href="/chats.php">Chats</a></li>
                 <li><a href="/perfil.php">Perfil</a></li>
-                <li><a href="/index.php" class="login">Login</a></li>
+                <?php
+                    if(empty($_session['usuario'])){
+                        echo'<li><a href="/sair.php" class="login">Sair</a></li>';
+                    } else{
+                        echo'<li><a href="/index.php" class="login">Login</a></li>';
+                    }
+                ?>
+                
+                
             </ul>
         </nav>
     </header>
+
     <main>
         <section>
-            a
+            <div class="container">
+                <h1>Solo Leveling</h1>
+                <img src="/imgs/imgs capa/sololevelingcapa.jpg">
+            </div>
         </section>
-        
     </main>
     <footer>
         <div>
@@ -53,4 +70,5 @@
             </div>
         </div>
     </footer>
+    <script src="/mobile-navbar.JS"></script>
 </body>

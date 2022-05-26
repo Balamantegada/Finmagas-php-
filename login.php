@@ -11,7 +11,7 @@
 		$database = "finmangas";
 		$hostname = "localhost";
 
-		$conexao = new mysqli($hostname,$user,$password,$database);
+		$conexao = new mysqli($hostname,$user,$password,$database) or die ('Não foi possível conectar');
 
 		// Evita caracteres epeciais (SQL Inject)
 		$usuario = $conexao -> real_escape_string($_POST['usuario']);
@@ -33,6 +33,7 @@
 			header('Location: home.php', true, 301);
 			exit();
 		} else {
+			$_SESSION['nao_autenticado'] = true;
 			$conexao -> close();
 			header('Location: index.php', true, 301);
 		}

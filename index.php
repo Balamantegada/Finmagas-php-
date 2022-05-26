@@ -9,6 +9,9 @@
     <link rel="shortcut icon" href="imgs/logo.png">
 </head>
 <body>
+    <?php
+    session_start();
+    ?>
     <main>
         <section style="margin-top:0; width: 600px; padding-bottom: 0px;">
             <div class="tabelalogin">
@@ -32,10 +35,18 @@
                                 <div class="inputbox">
                                     <input type="password" name="senha" id="senha" placeholder="Senha">
                                 </div>
+                                <?php
+                                if(isset($_SESSION['nao_autenticado'])):
+                                ?>
+                                    <p class="invalido">Usuario ou senha inválidos</p>
+                                <?php
+                                endif;
+                                unset($_SESSION['nao_autenticado']);
+                                ?>
                                 <div class="inputbox">
                                     <input type="submit" value="entrar" placeholder="Login">
                                 </div>
-                                <p class="forget">Esqueceu sua senha ?<a href="#">Clique aqui</a></p>
+                                <p class="forget">Esqueceu sua senha ?<a href="trocasenha.php">Clique aqui</a></p>
                                 <p class="forget">Não tem uma conta ?<a href="registro.php">Resgistre-se</a></p>
                             </form>
                         </div>

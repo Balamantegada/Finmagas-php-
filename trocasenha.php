@@ -16,33 +16,30 @@
                 <div class="color"></div>
                 <div class="color"></div>
                 <div class="boxlogin">
-                    <div class="container">
                     <div class="square" style="--i:0"></div>
                     <div class="square" style="--i:1"></div>
                     <div class="square" style="--i:2"></div>
                     <div class="square" style="--i:3"></div>
-                    <div class="square" style="--i:4;"></div>
+                    <div class="square" style="--i:4"></div>
+                    <div class="container">
                         <div class="form">
                             <img width="70px" src="imgs/logo1.png">
-                            <h2>Registrar-se</h2>
-                            <form action="cadastrar.php" method="post" id="formCadastrar" name="formCadastrar">
+                            <h2>Trocar senha</h2>
+                            <form action="placeholder.php" method="post" id="formlogar" name="formlogar">
                                 <div class="inputbox">
-                                    <input type="text" name="usuario" id="usuario" placeholder="Usuário">
-                                </div>
-                                <div class="inputbox">
-                                    <input type="text" name="email" id="email" placeholder="Email">
+                                    <input type="password" name="senhaantiga" id="senhaantiga" placeholder="Senha antiga">
                                 </div>
                                 <div class="inputbox">
                                     <input type="password" name="senha" id="senha" placeholder="Senha">
                                 </div>
                                 <div class="inputbox">
-                                    <input type="password" name="senhaconfirmada" placeholder="Confirmar senha">
+                                    <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirmar senha">
                                 </div>
                                 <div class="inputbox">
-                                    <input type="submit" value="cadastrar" style="font-size:15px;" placeholder="Login">
+                                    <input type="submit" value="Trocar" placeholder="Trocar">
                                 </div>
-                                <p class="forget">Esqueceu sua senha ?<a href="trocasenha.php">Clique aqui</a></p>
-                                <p class="forget">Já tem conta ?<a href="index.php">Faça login</a></p>
+                                <p class="forget">Deseja logar?<a href="index.php">Clique aqui</a></p>
+                                <p class="forget">Deseja registrar?<a href="registro.php">Resgistre-se</a></p>
                             </form>
                         </div>
                     </div>

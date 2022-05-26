@@ -16,7 +16,7 @@
         $sql="INSERT INTO `cadastros1`
 			(`usuario`, `senha`, `email`, `ativo`)
 			VALUES
-			('".$usuario."', '".$senha."', '".$email."', 's');";	
+			('".$usuario."', '".$senha."', '".$email."', '1');";
 
 		$res = $conexao->query($sql);
 

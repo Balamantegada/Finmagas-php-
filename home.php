@@ -16,15 +16,15 @@
 			//session_start inicia a sessão
 			session_start();
 
-			if (!$_SESSION['usuario']){
+			if (empty($_SESSION['usuario'])){
 				header('Location: index.php');
 				exit;
 		}
 	?>
     <header>
         <nav>
-            <h1 href="home.php">Finmangas</h1>
-            <img href="home.php" src="imgs/logo1.png" alt="logo">
+            <a href="home.php"><h1>Finmangas</h1></a>
+            <a href="home.php"><img src="imgs/logo1.png" alt="logo"></a>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -36,7 +36,15 @@
                 <li><a href="mangalist.php">Mangas</a></li>
                 <li><a href="chats.php">Chats</a></li>
                 <li><a href="perfil.php">Perfil</a></li>
-                <li><a href="index.php" class="login">Login</a></li>
+                <?php
+                    if(empty($_session['usuario'])){
+                        echo'<li><a href="sair.php" class="login">Sair</a></li>';
+                    } else{
+                        echo'<li><a href="index.php" class="login">Login</a></li>';
+                    }
+                ?>
+                
+                
             </ul>
         </nav>
     </header>
